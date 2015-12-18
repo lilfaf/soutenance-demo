@@ -5,3 +5,10 @@ services:
   - postgresql
 before_script:
   - psql -c 'create database soutenance_demo_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: myn0vFLI1U3iAJw2ahbdeU2mjpYzE1mf383z+GNwRdW2hlNhS+R3aqdRRJCeauBYaiu1wUna81RYZyLhRjX3kOkSISGY7x29tdshzf7ypsYqVzI/QfB12iI3p+w3wBtF6rySV7J7MvTqNe78DcVLu5nrToVlc08hx9WcU6a+y5VGrtMsgJzJBIn+6byOVv27MzAG0/UmyYQ0fUub+y47xjTbaJjM8kHH9cAPhi6QyyDYkqXmysweA90d2RTgeqvkpQ7h8hLx1jGxcr4fXy6ryOhHHxe/tsRG+KHCsN+LbojI0patDLzl52LV9Fw6ZttGJomYJRtvUPYUVa2lQxNM0MwUqepo8n+sMzc3d+52Ot3KT/ZyI7fcoAtQFLPieat7Eth0aHH1Xov1sAvf9rr3FSuNCZb/44lpHgjDqFY7X/FKY4ex1M1ZffMfm+Rxem2MK9sdK0u9MIkb0gtQKr1Udr8Pm+UV7jO02vWmbyXypAncJPiw43d/y9I1adFDRceuW9Z+3HMovz+Xs1K26/paHMYBYcRLfDNfs71iyy3GqMxv6lPkw9t9slXqa5QqtsYU1oDoAMRJrNqvmFKpmoCqUZb9YHe2suvZ2mw2ccbDJvk6EwGEgcLzvN0UI+C6XPxemgg9YLbRHJr+fiQi8VFX3SRkFhr2oOlxrlFXtmBqsX0=
+  app: soutenance-demo-supinfo
+  on:
+    repo: lilfaf/soutenance-demo
